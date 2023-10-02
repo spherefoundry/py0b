@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "py0b"
+authors = [
+    {name = "Antoni Kedracki"},
+]
+description = "DSL based binary parser"
+readme = "README.md"
+requires-python = ">=3.11"
+keywords = ["binary", "protocol", "parser", "dsl"]
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Topic :: Utilities"
+]
+dependencies = [
+]
+dynamic = ["version"]
+
+[tool.setuptools.dynamic]
+version = {attr = "py0b.VERSION"}
