@@ -10,7 +10,7 @@ class BytesField(Field):
     def __init__(self, size: int | str):
         """The provided size can be:
             - an integer in which case the provided amount is used directly
-            - a string in which case it is used to reference the value from a IntField in the parent Structure.
+            - a string in which case it is used to reference a value from a IntegerField in the parent Structure.
         """
         super().__init__()
         match size:

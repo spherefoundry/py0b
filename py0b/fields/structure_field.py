@@ -6,9 +6,17 @@ from py0b.structure import Structure
 
 
 class StructureField(Field):
-    """"""
+    """
+    Field for embedding Structures into Structures.
+    """
 
     def __init__(self, structure: Structure, count: int | str = 1):
+        """The provided count can be:
+            - an integer in which case the provided amount is used directly
+            - a string in which case it is used to reference a value from a IntegerField in the parent Structure.
+            - a '*' (asterisk string) in which case 'greedy' parsing will be performed (reading will continue until the
+                end of the Stream is reached)
+        """
         super().__init__()
         self.structure = structure
         match count:
